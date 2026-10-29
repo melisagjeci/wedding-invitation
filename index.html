@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="sq">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#faf8f4">
+
+    <meta
+        name="description"
+        content="Ftesa e dasmës së Roxhens dhe Orjana, 29 gusht 2027."
+    >
+
+    <title>Roxhens & Orjana | Ftesa jonë</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italianno&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="intro-active">
+
+    <!-- INTRO -->
+
+    <div id="invitationIntro" class="invitation-intro">
+
+        <img
+            src="images/wedding-intro.png"
+            class="intro-image"
+            alt="Ftesa e Roxhens dhe Orjana"
+        >
+
+        <button
+            id="readMoreButton"
+            class="read-more-button"
+            type="button"
+        >
+            Read more...
+            <span aria-hidden="true">⌄</span>
+        </button>
+
+    </div>
+
+
+    <!-- MAIN WEBSITE -->
+
+    <main id="weddingWebsite" inert>
+
+        <!-- WEDDING INVITATION -->
+
+        <section
+            class="invitation-section"
+            id="invitation"
+            aria-label="Ftesa e dasmës"
+        >
+
+            <img
+                src="images/wedding-invitation.png"
+                class="invitation-image"
+                alt="Roxhens dhe Orjana, 29 gusht 2027, Olea Glass Hall"
+            >
+
+        </section>
+
+
+        <!-- STORY -->
+
+        <section class="section story">
+
+            <img
+                src="images/cupid.png"
+                alt="Cupid"
+                class="cupid-image"
+            >
+
+            <h2>Kjo ftesë nuk të ka gjetur rastësisht.</h2>
+
+            <p class="description">
+                Për njerëzit tanë më të shtrenjtë, me të cilët
+                dëshirojmë të ndajmë një nga ditët më të bukura
+                të jetës sonë. Ndaj, me shumë dashuri, të ftojmë
+                të jesh pjesë e gëzimit tonë dhe ta bësh këtë
+                ditë edhe më të veçantë.
+            </p>
+
+        </section>
+
+
+        <!-- BOW BETWEEN STORY AND PROGRAM -->
+
+        <!--
+        <div class="story-bow-wrapper">
+
+            <img
+                src="images/olea-illustration.png"
+                alt="Dekor me fjongo ngjyrë bordo"
+                class="story-bow"
+            >
+
+        </div>
+        -->
+
+
+        <!-- COUNTDOWN -->
+
+        <section class="section countdown-section">
+
+            <h2>Countdown</h2>
+
+            <div
+                class="countdown"
+                aria-label="Koha e mbetur deri në dasmë"
+            >
+
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <p>DITË</p>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <p>ORË</p>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <p>MINUTA</p>
+                </div>
+
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <p>SEKONDA</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WEDDING PROGRAM -->
+
+        <section class="section program">
+
+            <p class="subtitle">THE EVENING</p>
+
+            <h2>From the first toast to the last dance.</h2>
+
+            <div class="timeline">
+
+                <div class="event">
+
+                    <span>18:00</span>
+
+                    <div>
+                        <h3>Ceremonia</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span>20:00</span>
+
+                    <div>
+                        <h3>Kokteili</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span>NË INFINIT</span>
+
+                    <div>
+                        <h3>Festa</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VENUE IMAGE -->
+
+            <div class="program-image-wrapper">
+
+                <img
+                    src="images/lokali.png"
+                    alt="Ilustrim i ambientit të dasmës"
+                    class="program-image"
+                    loading="lazy"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- LOCATION -->
+
+        <section class="section location">
+
+            <p class="subtitle">VENDNDODHJA</p>
+
+            <h2>Olea Glass Hall</h2>
+
+            <p class="location-address">
+                Rruga e Arbërit, Tiranë
+            </p>
+
+            <div class="location-map">
+
+                <iframe
+                    src="https://maps.google.com/maps?q=Olea%20Glass%20Hall%20Rruga%20e%20Arberit%20Tirana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Vendndodhja e Olea Glass Hall"
+                ></iframe>
+
+            </div>
+
+            <p class="location-date">
+            </p>
+
+            <a
+                class="location-btn"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Olea+Glass+Hall+Rruga+e+Arberit"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                HAP NË GOOGLE MAPS ↗
+            </a>
+
+        </section>
+
+
+        <!-- RSVP -->
+
+        <section class="section rsvp">
+
+            <p class="subtitle">
+                PËRGJIGJJA JUAJ
+            </p>
+
+            <h2>
+                Konfirmoni pjesëmarrjen
+            </h2>
+
+            <p class="description">
+                Do të ishte kënaqësi të festonim
+                së bashku këtë ditë të veçantë.
+
+                Ju lutemi të na njoftoni nëse
+                do të jeni pjesë e festës sonë.
+            </p>
+
+
+            <form id="rsvpForm">
+
+                <label for="guestName">
+                    Emri dhe mbiemri
+                </label>
+
+                <input
+                    id="guestName"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    maxlength="120"
+                    placeholder="Emri dhe mbiemri"
+                    required
+                >
+
+
+                <fieldset>
+
+                    <legend>
+                        A do të merrni pjesë?
+                    </legend>
+
+                    <label class="radio-label">
+
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="Po"
+                            required
+                        >
+
+                        Po, me shumë kënaqësi!
+
+                    </label>
+
+
+                    <label class="radio-label">
+
+                        <input
+                            type="radio"
+                            name="attendance"
+                            value="Jo"
+                        >
+
+                        Fatkeqësisht, nuk mundem.
+
+                    </label>
+
+                </fieldset>
+
+
+                <div id="guestWrap" hidden>
+
+                    <label for="guests">
+                        Numri i personave
+                    </label>
+
+                    <select id="guests" name="guests">
+
+                        <option value="">
+                            Zgjidh numrin
+                        </option>
+
+                        <option value="1">1 person</option>
+                        <option value="2">2 persona</option>
+                        <option value="3">3 persona</option>
+                        <option value="4">4 persona</option>
+                        <option value="5">5 persona</option>
+                        <option value="6">6 persona</option>
+
+                    </select>
+
+                </div>
+
+
+                <label for="guestMessage">
+                    Mesazh për çiftin (opsional)
+                </label>
+
+                <textarea
+                    id="guestMessage"
+                    name="message"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="Shkruani urimin tuaj..."
+                ></textarea>
+
+
+                <button
+                    id="submitButton"
+                    type="submit"
+                >
+                    DËRGO KONFIRMIMIN ♡
+                </button>
+
+
+                <p
+                    id="status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>Me dashuri,</p>
+
+            <h2>Roxhens & Orjana</h2>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

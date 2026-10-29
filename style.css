@@ -1,0 +1,1092 @@
+/* =====================================
+   ROXHENS & ORJANA
+   WEDDING WEBSITE
+===================================== */
+
+:root {
+    --white: #ffffff;
+    --cream: #faf8f3;
+    --sage: #b9c6aa;
+    --sage-dark: #829273;
+    --olive: #526b3e;
+    --olive-dark: #39452f;
+    --text: #3d4036;
+
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-script: 'Great Vibes', cursive;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+
+/* =====================================
+   GLOBAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+    scroll-snap-type: none;
+}
+
+body.intro-active {
+    overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   INTRO
+===================================== */
+
+.invitation-intro {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    overflow: hidden;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.intro-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =====================================
+   READ MORE BUTTON
+===================================== */
+
+.read-more-button {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+    padding: 12px 24px;
+
+    transform: translateX(-50%);
+
+    border: none;
+    background: transparent;
+
+    font-family: var(--font-heading);
+    font-size: 23px;
+    letter-spacing: 1px;
+    color: var(--olive);
+
+    z-index: 10;
+
+    animation: floatingText 2.2s ease-in-out infinite;
+}
+
+.read-more-arrow {
+    font-size: 26px;
+    line-height: 1;
+}
+
+@keyframes floatingText {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -10px);
+    }
+}
+
+.read-more-button:focus-visible {
+    outline: 2px solid var(--olive);
+    outline-offset: 5px;
+}
+
+.invitation-intro.intro-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =====================================
+   WEBSITE REVEAL
+===================================== */
+
+#weddingWebsite {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+#weddingWebsite.website-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   FULL SCREEN INVITATION
+===================================== */
+
+.invitation-section {
+    position: relative;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px 15px 75px;
+
+    background: white;
+
+    scroll-snap-align: none;
+}
+
+.invitation-design {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invitation-image {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    max-height: 78svh;
+
+    object-fit: contain;
+}
+
+
+/* =====================================
+   SCROLL INDICATOR
+===================================== */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    color: var(--olive);
+}
+
+.scroll-indicator span {
+    color: var(--olive);
+}
+
+.scroll-indicator span:first-child {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.scroll-arrow {
+    font-size: 25px;
+    animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+
+/* =====================================
+   GENERAL SECTIONS
+===================================== */
+
+.section {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    padding: 100px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    scroll-snap-align: none;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--olive);
+    margin-bottom: 22px;
+}
+
+
+/* =====================================
+   BRITTANY FONT
+===================================== */
+
+@font-face {
+    font-family: 'Brittany';
+    src: url('fonts/BrittanySignature.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 400;
+    color: var(--olive);
+    margin-bottom: 30px;
+}
+
+.description {
+    max-width: 570px;
+    font-size: 14px;
+    line-height: 2.2;
+    color: #656b60;
+}
+
+
+/* =====================================
+   STORY
+===================================== */
+
+.story {
+    background: #ffffff;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 20px 25px 55px;
+}
+
+.story .description {
+    font-family: var(--font-heading);
+    text-align: justify;
+    text-align-last: center;
+}
+
+
+/* =====================================
+   CUPID IMAGE
+===================================== */
+
+.cupid-image {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    object-fit: contain;
+}
+
+
+/* =====================================
+   BOW BETWEEN STORY AND PROGRAM
+===================================== */
+
+.story-bow-wrapper {
+  margin-top: 120px;
+  margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px 0;
+    background: #ffffff;
+}
+
+.story-bow {
+    display: block;
+    width: 220px;
+    max-width: 48vw;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+
+/* =====================================
+   PROGRAM
+===================================== */
+
+.program {
+    background: white;
+    padding-top: 25px;
+}
+
+.timeline {
+    width: 100%;
+    max-width: 550px;
+    margin-top: 30px;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 25px;
+
+    text-align: left;
+    padding: 30px 0;
+
+    border-bottom: 1px solid #e0e5d9;
+}
+
+.event:last-child {
+    border-bottom: none;
+}
+
+.event > span {
+    font-size: 12px;
+    color: var(--olive);
+    padding-top: 8px;
+}
+
+.event h3 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--olive);
+}
+
+.event p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #747b70;
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   COUNTDOWN
+===================================== */
+
+.countdown-section {
+    background: #59000A;
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+    max-width: none;
+
+    padding: 100px 25px;
+    margin: 0;
+
+    height: auto;
+    aspect-ratio: auto;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-section h2,
+.countdown-section .subtitle {
+    color: white;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-top: 35px;
+}
+
+.countdown-item {
+    min-width: 70px;
+}
+
+.countdown span {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 70px;
+    color: white;
+}
+
+.countdown p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    color: white;
+}
+
+
+/* =====================================
+   LOCATION
+===================================== */
+
+.location {
+    background: #f3f5ef;
+}
+
+.location > p:not(.subtitle) {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 38px;
+    padding: 17px 34px;
+
+    border: 1px solid var(--olive);
+    color: var(--olive);
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--olive);
+    color: white;
+}
+
+
+/* =====================================
+   RSVP
+===================================== */
+
+.rsvp {
+    background: #f3f5ef;
+}
+
+#rsvpForm {
+    width: 100%;
+    max-width: 540px;
+
+    background: white;
+    padding: 45px;
+    margin-top: 35px;
+
+    text-align: left;
+    border: 1px solid #dce4d5;
+}
+
+#rsvpForm label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+#rsvpForm input[type="text"],
+#rsvpForm select,
+#rsvpForm textarea {
+    width: 100%;
+    padding: 16px;
+
+    border: 1px solid #d5ddcf;
+    background: white;
+
+    font-size: 13px;
+    outline: none;
+}
+
+#rsvpForm textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+#rsvpForm fieldset {
+    border: none;
+    margin-top: 20px;
+}
+
+#rsvpForm legend {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.radio-label {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400 !important;
+    cursor: pointer;
+    margin: 12px 0 !important;
+}
+
+.radio-label input {
+    accent-color: var(--olive);
+}
+
+#guestWrap[hidden] {
+    display: none;
+}
+
+#rsvpForm button {
+    width: 100%;
+    padding: 19px 20px;
+    margin-top: 35px;
+
+    background: var(--olive);
+    color: white;
+    border: none;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+#rsvpForm button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: var(--olive-dark);
+    color: white;
+
+    text-align: center;
+    padding: 85px 20px;
+
+    scroll-snap-align: none;
+}
+
+footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 65px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+footer p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .invitation-section {
+        padding: 15px 10px 0px;
+    }
+
+    .invitation-design {
+        max-width: 100%;
+    }
+
+    .invitation-image {
+        max-height: 80svh;
+    }
+
+    .read-more-button {
+        bottom: 2%;
+        font-size: 21px;
+    }
+
+    .section {
+        min-height: 100svh;
+        padding: 5px 22px;
+    }
+
+    .story {
+        min-height: auto;
+        justify-content: flex-start;
+        padding: 25px 22px 120px;
+    }
+
+    .story .cupid-image {
+        width: 130px;
+        margin: 0 auto 20px;
+    }
+
+    .story h2 {
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 35px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 2;
+    }
+
+    .story-bow-wrapper {
+        padding: 0 15px;
+    }
+
+    .story-bow {
+        width: 185px;
+    }
+
+    .countdown {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .countdown-item {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .countdown span {
+        font-size: 38px;
+    }
+
+    .countdown p {
+        font-size: 8px;
+    }
+
+    .program {
+        padding-top: 25px;
+    }
+
+    .event {
+        grid-template-columns: 85px 1fr;
+        gap: 15px;
+    }
+
+    .event h3 {
+        font-size: 27px;
+    }
+
+    #rsvpForm {
+        padding: 28px 22px;
+    }
+
+    footer h2 {
+        font-size: 60px;
+    }
+}
+
+
+/* =====================================
+   REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.location {
+    min-height: auto;
+    padding: 100px 25px;
+    background: #ffffff;
+}
+
+.location .subtitle {
+    margin-bottom: 15px;
+}
+
+.location h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 6vw, 64px);
+    font-weight: 400;
+    color: var(--olive-dark);
+    margin-bottom: 12px;
+}
+
+.location-address {
+    font-size: 13px;
+    color: #77796e;
+    margin-bottom: 35px;
+}
+
+
+.location-map {
+    width: 100%;
+    max-width: 650px;
+    height: 260px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #e5e8df;
+}
+
+.location-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) { .location-map { max-width: 100%; height: 220px; } }
+
+.location-date {
+    margin-top: 30px;
+    font-family: var(--font-heading);
+    font-size: 25px;
+    color: var(--olive-dark);
+}
+
+.location-date span {
+    color: var(--sage-dark);
+    margin: 0 5px;
+}
+
+.location-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 15px 25px;
+    border: 1px solid var(--olive);
+    color: var(--olive);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.location-btn:hover {
+    background: var(--olive);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .location {
+        padding: 75px 20px;
+    }
+
+    .location h2 {
+        font-size: 39px;
+    }
+
+    .location-address {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .location-map {
+        height: 220px;
+    }
+
+    .location-date {
+        font-size: 22px;
+    }
+
+    .location-btn {
+        font-size: 9px;
+        padding: 15px 20px;
+    }
+}
+.rsvp {
+    background: #faf8f3;
+    min-height: auto;
+    padding: 110px 24px;
+}
+
+.rsvp .subtitle {
+    font-family: var(--font-body);
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--olive);
+    margin-bottom: 20px;
+}
+
+.rsvp h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--olive-dark);
+    margin-bottom: 22px;
+}
+
+.rsvp .description {
+    max-width: 430px;
+    font-family: var(--font-heading);
+    font-size: 19px;
+    line-height: 1.8;
+    color: #74776b;
+}
+
+#rsvpForm {
+    width: 100%;
+    max-width: 500px;
+    padding: 42px;
+    margin-top: 38px;
+    background: #ffffff;
+    border: 1px solid #e4e7dc;
+    border-radius: 2px;
+    box-shadow: 0 12px 40px rgba(57, 69, 47, 0.045);
+    text-align: left;
+}
+
+#rsvpForm label,
+#rsvpForm legend {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--olive-dark);
+}
+
+#rsvpForm label {
+    margin: 22px 0 10px;
+}
+
+#rsvpForm input[type="text"],
+#rsvpForm select,
+#rsvpForm textarea {
+    width: 100%;
+    padding: 15px 14px;
+    border: 1px solid #e0e4d9;
+    border-radius: 0;
+    background: #fdfdfb;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 12px;
+    transition: border-color 0.25s ease;
+}
+
+#rsvpForm input[type="text"]:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+    border-color: var(--sage-dark);
+    outline: none;
+}
+
+#rsvpForm input::placeholder,
+#rsvpForm textarea::placeholder {
+    color: #a2a397;
+    font-size: 11px;
+}
+
+#rsvpForm fieldset {
+    border: none;
+    margin-top: 28px;
+}
+
+#rsvpForm legend {
+    margin-bottom: 15px;
+}
+
+#rsvpForm .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+#rsvpForm .radio-label input {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: var(--olive);
+}
+
+#rsvpForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+#rsvpForm button {
+    width: 100%;
+    padding: 18px 15px;
+    margin-top: 30px;
+    background: var(--olive-dark);
+    border: 1px solid var(--olive-dark);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#rsvpForm button:hover {
+    background: transparent;
+    color: var(--olive-dark);
+}
+
+#rsvpForm button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#rsvpForm #status {
+    font-family: var(--font-body);
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--olive);
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .rsvp {
+        padding: 80px 20px;
+    }
+
+    .rsvp .subtitle {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .rsvp h2 {
+        max-width: 350px;
+        font-size: 37px;
+        margin-bottom: 18px;
+    }
+
+    .rsvp .description {
+        max-width: 340px;
+        font-size: 17px;
+        line-height: 1.8;
+    }
+
+    #rsvpForm {
+        padding: 28px 22px;
+        margin-top: 30px;
+    }
+
+    #rsvpForm button {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+}
+
+
+.story .cupid-image {
+    transform: translateY(-90px);
+}
+
+
+.program-image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 35px auto 0;
+    padding: 0 15px;
+}
+
+.program-image {
+    display: block;
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin: 50px auto 0;
+    border-radius: 15%;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .program-image-wrapper {
+        max-width: 320px;
+        margin-top: 25px;
+    }
+}

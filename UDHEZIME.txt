@@ -1,0 +1,19 @@
+FTESA ROXHENS & ORJANA — UDHËZIME
+
+1. Hapni index.html në browser për të parë dizajnin. Për zhvillim përdorni VS Code + Live Server.
+2. Krijoni një Google Sheet bosh në llogarinë tuaj Google.
+3. Te Sheet: Extensions > Apps Script. Ngjisni kodin nga google-apps-script.gs dhe ruajeni.
+4. Deploy > New deployment > Select type: Web app.
+   Execute as: Me. Who has access: Anyone (që të mund të përgjigjen të ftuarit pa hyrë në Google).
+   Authorizoni aksesin dhe klikoni Deploy.
+5. Kopjoni URL-në e Web App (përfundon me /exec).
+6. Në script.js, vendoseni te GOOGLE_SCRIPT_URL = 'URL_JUAJ';
+7. Testoni një konfirmim dhe kontrolloni tab-in RSVP në Google Sheets.
+8. Publikoni index.html, style.css dhe script.js në Netlify ose GitHub Pages.
+
+KUJDES:
+- Deri në plotësimin e URL-së, formulari nuk i ruan përgjigjet.
+- Google Sheets është privat sipas lejeve që vendosni; mos e ndani publikisht.
+- Linku i Web App është publik për të pranuar përgjigje, prandaj mund të marrë edhe dërgime të padëshiruara; për evente të mëdha mund të shtohen kode unike RSVP.
+- Përditësimet e kodit Apps Script kërkojnë një version të ri deployment-i.
+- Koha e ceremonisë është vendosur 19:00 sipas kërkesës.
