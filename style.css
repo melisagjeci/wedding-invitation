@@ -1134,3 +1134,71 @@ footer p {
         z-index: 2;
     }
 }
+.read-more-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    padding: 7px 8px;
+
+    background: rgba(250, 248, 244, 0.85);
+    border: 1px solid rgba(82, 107, 62, 0.2);
+    border-radius: 16px 0 0 16px;
+
+    color: #526b3e;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 5;
+
+    transition: background 0.3s ease;
+}
+
+.read-more-button:hover {
+    background: rgba(250, 248, 244, 1);
+}
+
+.read-more-arrow {
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1;
+
+    animation: arrowMove 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowMove {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+}
+
+@media (max-width: 480px) {
+    .read-more-button {
+        top: 50%;
+        right: 0;
+        padding: 7px 7px;
+        font-size: 10px;
+    }
+
+    .read-more-arrow {
+        font-size: 16px;
+    }
+}
+
