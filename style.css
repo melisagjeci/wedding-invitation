@@ -685,7 +685,7 @@ footer p {
     .story {
         min-height: auto;
         justify-content: flex-start;
-        padding: 25px 22px 120px;
+        padding: 125px 22px 120px;
     }
 
     .story .cupid-image {
@@ -1202,3 +1202,44 @@ footer p {
     }
 }
 
+.invitation-section {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+
+    object-fit: cover;
+    object-position: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .invitation-section {
+        width: 100%;
+        height: 100dvh;
+        min-height: 0;
+    }
+
+    .invitation-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
